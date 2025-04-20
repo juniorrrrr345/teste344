@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>BROLY69 - Vitrine</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Bienvenue chez <span style="color:yellow;">BROLY</span><span style="color:white;">69</span></h1>
+  <p>Voici nos produits :</p>
+  <div class="products">
+    <% products.forEach(product => { %>
+      <div class="product">
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <% if (product.media.includes('.mp4')) { %>
+          <video src="<%= product.media %>" controls width="250"></video>
+        <% } else { %>
+          <img src="<%= product.media %>" width="250"/>
+        <% } %>
+        <p><strong><%= product.price %></strong></p>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+  background: #000;
+  color: #ffe600;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.product {
+  border: 2px solid #ffe600;
+  padding: 15px;
+  border-radius: 10px;
+  width: 260px;
+  background: #111;
+}
