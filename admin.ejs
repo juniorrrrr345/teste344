@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - BROLY69</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Panneau Admin</h1>
+  <form action="/add-product" method="POST">
+    <input type="text" name="name" placeholder="Nom du produit" required>
+    <input type="text" name="description" placeholder="Description" required>
+    <input type="text" name="price" placeholder="Prix" required>
+    <input type="text" name="media" placeholder="Lien image/vidéo" required>
+    <button type="submit">Ajouter</button>
+  </form>
+
+  <h2>Produits ajoutés</h2>
+  <% products.forEach(product => { %>
+    <div>
+      <strong><%= product.name %></strong> - <%= product.price %>
+    </div>
+  <% }) %>
+</body>
+</html>
